@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addPost } from "./simplePostSlice";
+import simplePostSlice from "./simplePostSlice";
 
-const simplePost = () => {
+const SimplePost = () => {
+  const [post, setPost] = useState("");
+
+  const newPost = { id: "2", title: "new Post2", details: "details2" };
+
+  const posts = useSelector((state) => state.posts);
+  console.log(posts);
+  const dispatch = useDispatch();
+
   return (
-    <div>simplePost</div>
-  )
-}
+    <div>
+      <ul>
+        <li>{posts[0].id}</li>
+        <li>{posts[0].title}</li>
+      </ul>
+    </div>
+  );
+};
 
-export default simplePost
+export default SimplePost;

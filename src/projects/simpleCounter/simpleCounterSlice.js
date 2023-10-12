@@ -15,14 +15,15 @@ export const SimpleCounterSlice = createSlice({
       state.count -= 1;
     },
     reset: (state) => {
-        state.count = 0;
+      state.count = 0;
     },
     countByValue: (state, payload) => {
-        console.log(typeof(payload.payload))
-        state.count = state.count + payload.payload;
+      console.log(typeof payload.payload);
+      state.count = state.count + payload.payload;
     },
   },
 });
 
-export const { increment, decrement, reset, countByValue } = SimpleCounterSlice.actions;
+export const { increment, decrement, reset, countByValue } =
+  SimpleCounterSlice.actions;
 export default SimpleCounterSlice.reducer;
