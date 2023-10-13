@@ -6,11 +6,15 @@ const SimplePostSlice = createSlice({
   name: "simplePost",
   initialState,
   reducers: {
-    addPost: (state, post) => {
-      state.posts.push(post);
+    addPost: (state, { payload }) => {
+      state.push(payload);
+    },
+    removePost: (state) => {
+      state.pop();
     },
   },
 });
 
-export const { addPost } = SimplePostSlice.actions;
+export const selectAllPosts = (state) => state.posts;
+export const { addPost, removePost } = SimplePostSlice.actions;
 export default SimplePostSlice.reducer;

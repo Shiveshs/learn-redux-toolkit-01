@@ -1,0 +1,28 @@
+.post-tile-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-tile{
+    text-align: initial;
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 26%;
+    box-shadow: 2px 2px 0 0 #3f3f3f;
+    margin: 1rem;
+}
+
+.add-post{
+    padding: 1rem;
+    margin: 0.5rem;
+    background: rgb(67 207 221 / 50%);
+    border: 2px solid #085877;
+    border-radius: 0.9rem;
+    color: #00199d;
+    font-weight: 600;
+}
+.add-post:hover{
+    background: rgb(3, 68, 74);
+    color: #fff;
+}

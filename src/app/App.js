@@ -5,7 +5,7 @@ import SimplePost from "../projects/simplePost/simplePost";
 function App() {
   return (
     <div className="App">
-      <Counter/>
+      {/* <Counter/> */}
       <SimplePost/>
     </div>
   );
